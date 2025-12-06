@@ -94,7 +94,7 @@ async function loadPendaftar() {
 
     // find indices robustly
     const namaIndex = header.findIndex(h => h.includes("nama")) !== -1 ? header.findIndex(h => h.includes("nama")) : 0;
-    const timIndex = header.findIndex(h => h.includes("tim")) !== -1 ? header.findIndex(h => h.includes("tim")) : (header.findIndex(h=>h.includes("dojang")) !== -1 ? header.findIndex(h=>h.includes("dojang")) : 1);
+    const timIndex = header.findIndex(h => h.includes("TIM")) !== -1 ? header.findIndex(h => h.includes("TIM")) : (header.findIndex(h=>h.includes("dojang")) !== -1 ? header.findIndex(h=>h.includes("dojang")) : 1);
 
     const tbody = document.getElementById("listPendaftar");
     tbody.innerHTML = "";
@@ -105,7 +105,7 @@ async function loadPendaftar() {
       if (nama) {
         const tr = document.createElement('tr');
         const td1 = document.createElement('td'); td1.textContent = nama;
-        const td2 = document.createElement('td'); td2.textContent = tim;
+        const td2 = document.createElement('td'); td2.textContent = TIM;
         tr.appendChild(td1); tr.appendChild(td2);
         tbody.appendChild(tr);
       }
@@ -227,3 +227,4 @@ function toggleMenu(){
 
 </body>
 </html>
+
