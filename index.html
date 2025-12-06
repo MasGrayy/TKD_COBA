@@ -94,7 +94,7 @@ async function loadPendaftar() {
 
     // find indices robustly
     const namaIndex = header.findIndex(h => h.includes("nama")) !== -1 ? header.findIndex(h => h.includes("nama")) : 0;
-    const timIndex = header.findIndex(h => h.includes("TIM")) !== -1 ? header.findIndex(h => h.includes("TIM")) : (header.findIndex(h=>h.includes("dojang")) !== -1 ? header.findIndex(h=>h.includes("dojang")) : 1);
+    const timIndex = header.findIndex(h => h.includes("TIM")) !== -1 ? header.findIndex(h => h.includes("TIM")) : 1;
 
     const tbody = document.getElementById("listPendaftar");
     tbody.innerHTML = "";
@@ -227,4 +227,5 @@ function toggleMenu(){
 
 </body>
 </html>
+
 
